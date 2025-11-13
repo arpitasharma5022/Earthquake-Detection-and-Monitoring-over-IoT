@@ -70,6 +70,40 @@ It provides **real-time earthquake monitoring**, local alerts, and **graphical v
 
 ---
 
+📈 IoT Cloud Setup (ThingSpeak)
+
+Go to ThingSpeak.com
+ → Create an account.
+
+Make a new channel with 2 fields:
+
+Field 1 → “Acceleration Value”
+
+Field 2 → “Vibration Status”
+
+Copy your Channel ID and Write API Key → paste into the code.
+
+Upload the code to NodeMCU.
+
+Open the ThingSpeak dashboard → you’ll see live graphs of ground motion data.
+
+🚨 Alert Mechanism
+
+If vibration sensor detects movement → buzzer activates instantly.
+
+If acceleration > threshold (2g) → LCD shows “EARTHQUAKE!” and buzzer rings.
+
+Data is uploaded to ThingSpeak every 2 seconds for remote monitoring.
+
+📊 Output Example
+Parameter	Normal	Earthquake Detected
+Accelerometer (g)	0.5–1.5	>2.0
+Vibration Sensor	LOW	HIGH
+LCD Display	“Normal”	“EARTHQUAKE!”
+ThingSpeak Graph	Flat	Sharp spike
+Buzzer	OFF	ON
+
+
 ## 👩‍💻 Author
 
 **Arpita Sharma**  
